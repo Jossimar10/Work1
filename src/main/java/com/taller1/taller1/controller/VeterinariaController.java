@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 
 @RestController
-@RequestMapping("/veterinarias")
+@RequestMapping(path = "/veterinarias")
 public class VeterinariaController {
 
     @Autowired

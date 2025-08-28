@@ -15,6 +15,6 @@ public class ProcedimientoHistoriaClinica {
     @Column(name = "IdProcedimiento", nullable = false)
     private Long idProcedimiento;
 
-    @Column(name = "IdHistoria;", nullable = false)
+    @Column(name = "IdHistoria", nullable = false)
     private Integer idHistoria;
 }
