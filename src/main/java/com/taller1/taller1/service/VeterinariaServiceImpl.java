@@ -11,6 +11,15 @@ public class VeterinariaServiceImpl {
     @Autowired
     private VeterinariaRepositories veterinariaRepositories;
 
-    @Autowired Veter
+    
+    public VeterinariaServiceImpl(VeterinariaRepositories veterinariaRepositories) {
+        this.veterinariaRepositories = veterinariaRepositories;
+    }
+
+    public void deleteVeterinaria(Long idVet) {
+        veterinariaRepositories.deleteById(idVet);
+    }
+
+    
 
 }

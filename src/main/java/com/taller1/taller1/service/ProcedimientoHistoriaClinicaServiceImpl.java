@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.taller1.taller1.Dto.ProcedimientoHistoriaClinicaDTO;
+import com.taller1.taller1.dto.ProcedimientoHistoriaClinicaDTO;
 import com.taller1.taller1.mapper.ProcedimientoHistoriaClinicaMapper;
 import com.taller1.taller1.models.ProcedimientoHistoriaClinica;
 import com.taller1.taller1.repositories.ProcedimientoHistoriaClinicaRepositories;

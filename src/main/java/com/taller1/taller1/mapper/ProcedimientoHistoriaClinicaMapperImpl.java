@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.taller1.taller1.Dto.ProcedimientoHistoriaClinicaDTO;
+import com.taller1.taller1.dto.ProcedimientoHistoriaClinicaDTO;
 import com.taller1.taller1.models.ProcedimientoHistoriaClinica;
 
 @Component

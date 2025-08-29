@@ -3,8 +3,7 @@ package com.taller1.taller1.mapper;
 
 import java.util.List;
 
-
-import com.taller1.taller1.Dto.ProcedimientoHistoriaClinicaDTO;
+import com.taller1.taller1.dto.ProcedimientoHistoriaClinicaDTO;
 import com.taller1.taller1.models.ProcedimientoHistoriaClinica;
 
 

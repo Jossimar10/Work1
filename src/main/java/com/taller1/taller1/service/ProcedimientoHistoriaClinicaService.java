@@ -2,7 +2,7 @@ package com.taller1.taller1.service;
 
 import java.util.List;
 
-import com.taller1.taller1.Dto.ProcedimientoHistoriaClinicaDTO;
+import com.taller1.taller1.dto.ProcedimientoHistoriaClinicaDTO;
 
 public interface ProcedimientoHistoriaClinicaService {
     public ProcedimientoHistoriaClinicaDTO findById(Long id);

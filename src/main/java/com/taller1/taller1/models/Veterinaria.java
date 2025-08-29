@@ -5,29 +5,31 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Getter
+@Data
+@Table(name = "Veterinaria")
 public class Veterinaria {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Idvet" , nullable = false)
-    private Long idVet;
+    @Column(nullable = false)
+    private Long idVete;
 
-    @Column(name = "Nom", length = 50, nullable = false)
-    private String nom;
+    @Column(length = 50, nullable = false)
+    private String nombre;
 
-    @Column(name = "Correo", length = 100, unique = true)
+    @Column(length = 100, unique = true)
     private String correo;
 
-    @Column(name = "Foto", length = 255)
+    @Column(length = 255)
     private String foto;
 
-    @Column(name = "Direc", length = 100, unique = true)
+    @Column(length = 100, unique = true)
     private String direc;
 }

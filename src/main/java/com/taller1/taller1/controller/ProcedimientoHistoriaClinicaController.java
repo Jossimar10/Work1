@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.taller1.taller1.Dto.ProcedimientoHistoriaClinicaDTO;
+import com.taller1.taller1.dto.ProcedimientoHistoriaClinicaDTO;
 import com.taller1.taller1.service.ProcedimientoHistoriaClinicaService;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
