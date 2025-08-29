@@ -7,7 +7,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class ProcedimientoHistoriaClinicaDTO {
-    private Long idProcedimiento;
-    private Integer idHistoria;
+public class VeterinariaDTO {
+    private Long idVet;
+    private String nom;
+    private String correo;
+    private String foto;
+    private String direc;
 }
