@@ -11,7 +11,7 @@ import com.taller1.taller1.models.ProcedimientoHistoriaClinica;
 @Component
 public class ProcedimientoHistoriaClinicaMapperImpl implements ProcedimientoHistoriaClinicaMapper {
     @Override
-    public List<ProcedimientoHistoriaClinicaDTO> listDtoProcedimientoHistoriaClinicaDTOs(List<ProcedimientoHistoriaClinica> procedimientoHistoriaClinica) {
+    public List<ProcedimientoHistoriaClinicaDTO> lProcedimientoHistoriaClinicaDTO(List<ProcedimientoHistoriaClinica> procedimientoHistoriaClinica) {
         if ( procedimientoHistoriaClinica == null ) {
             return null;
         }

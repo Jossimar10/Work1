@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.taller1.taller1.dto.Veterinariadto;
+import com.taller1.taller1.dto.VeterinariaDTO;
 import com.taller1.taller1.models.Veterinaria;
 
 
@@ -13,24 +13,24 @@ import com.taller1.taller1.models.Veterinaria;
 public class VeterinariaMapperImpl implements VeterinariaMapper {
 
     @Override
-   public Veterinaria consultVete(Veterinariadto veterinariaDTO) {
-       if ( veterinariaDTO == null ) {
-           return null;
-       }
-         Veterinaria veterinaria = new Veterinaria();
-         veterinaria.setIdVete( veterinariaDTO.getIdVet() );
-         veterinaria.setNombre( veterinariaDTO.getNom() );
-         veterinaria.setDirec( veterinariaDTO.getDirec() );
-         veterinaria.setCorreo( veterinariaDTO.getCorreo() );
-         return veterinaria;
-   }
+    public Veterinaria consultVete(VeterinariaDTO veterinariaDTO) {
+    if ( veterinariaDTO == null ) {
+        return null;
+    }
+        Veterinaria veterinaria = new Veterinaria();
+        veterinaria.setIdVete( veterinariaDTO.getIdVet() );
+        veterinaria.setNombre( veterinariaDTO.getNom() );
+        veterinaria.setDirec( veterinariaDTO.getDirec() );
+        veterinaria.setCorreo( veterinariaDTO.getCorreo() );
+        return veterinaria;
+}
 
     @Override
-    public  Veterinariadto toVeterinariadto(Veterinaria veterinaria) {
+    public VeterinariaDTO consultVeterinariaDTO(Veterinaria veterinaria) {
         if ( veterinaria == null ) {
             return null;
         }
-        Veterinariadto veterinariaDTO = new Veterinariadto();
+        VeterinariaDTO veterinariaDTO = new VeterinariaDTO();
         veterinariaDTO.setIdVet( veterinaria.getIdVete() );
         veterinariaDTO.setNom( veterinaria.getNombre() );
         veterinariaDTO.setDirec( veterinaria.getDirec() );
@@ -39,19 +39,19 @@ public class VeterinariaMapperImpl implements VeterinariaMapper {
     }
 
     @Override
-    public List<Veterinariadto> listDtoVeterinariaDTOs(List<Veterinaria> veterinaria) {
+    public List<VeterinariaDTO> listVeterinariaDTO(List<Veterinaria> veterinaria) {
         if ( veterinaria == null ) {
             return null;
         }
-        List<Veterinariadto> list = new ArrayList<Veterinariadto>( veterinaria.size() );
+        List<VeterinariaDTO> list = new ArrayList<VeterinariaDTO>( veterinaria.size() );
         for ( Veterinaria veterinaria1 : veterinaria ) {
-            list.add( toVeterinariadto( veterinaria1 ) );
+            list.add( consultVeterinariaDTO( veterinaria1 ) );
         }
         return list;
     }
 
     @Override
-    public void deleteVeterinaria(Veterinaria Veterinaria, Veterinariadto veterinariaDTO) {
+    public void deleteVeterinaria(Veterinaria Veterinaria, VeterinariaDTO veterinariaDTO) {
         if ( veterinariaDTO == null ) {
             return;
         }

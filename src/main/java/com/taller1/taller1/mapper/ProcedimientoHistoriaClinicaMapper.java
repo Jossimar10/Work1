@@ -8,7 +8,7 @@ import com.taller1.taller1.models.ProcedimientoHistoriaClinica;
 
 
 public interface ProcedimientoHistoriaClinicaMapper {
-    List<ProcedimientoHistoriaClinicaDTO> listDtoProcedimientoHistoriaClinicaDTOs(List<ProcedimientoHistoriaClinica> ProcedimientoHistoriaClinica);
+    List<ProcedimientoHistoriaClinicaDTO> lProcedimientoHistoriaClinicaDTO(List<ProcedimientoHistoriaClinica> ProcedimientoHistoriaClinica);
     ProcedimientoHistoriaClinicaDTO save(ProcedimientoHistoriaClinica procedimientoHistoriaClinica);
     ProcedimientoHistoriaClinica toEntity(ProcedimientoHistoriaClinicaDTO procedimientoHistoriaClinicaDTO);
     void deleteProcedimientoHistoriaClinica(ProcedimientoHistoriaClinica procedimientoHistoriaClinica);
