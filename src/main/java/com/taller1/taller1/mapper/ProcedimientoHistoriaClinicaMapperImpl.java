@@ -8,6 +8,16 @@ import org.springframework.stereotype.Component;
 import com.taller1.taller1.dto.ProcedimientoHistoriaClinicaDTO;
 import com.taller1.taller1.models.ProcedimientoHistoriaClinica;
 
+//Component X
+//Override X
+//List DTO X
+//save --
+//toEntity --
+//delete  X
+//No implemento update
+
+
+
 @Component
 public class ProcedimientoHistoriaClinicaMapperImpl implements ProcedimientoHistoriaClinicaMapper {
     @Override
@@ -18,7 +28,7 @@ public class ProcedimientoHistoriaClinicaMapperImpl implements ProcedimientoHist
 
         List<ProcedimientoHistoriaClinicaDTO> list = new ArrayList<ProcedimientoHistoriaClinicaDTO>( procedimientoHistoriaClinica.size() );
         for ( ProcedimientoHistoriaClinica procedimientoHistoriaClinica1 : procedimientoHistoriaClinica ) {
-            list.add( save( procedimientoHistoriaClinica1 ) );
+            list.add(save(procedimientoHistoriaClinica1));
         }
 
         return list;
@@ -54,5 +64,6 @@ public class ProcedimientoHistoriaClinicaMapperImpl implements ProcedimientoHist
 
     @Override
     public void deleteProcedimientoHistoriaClinica(ProcedimientoHistoriaClinica procedimientoHistoriaClinica) {
+
     }
 }

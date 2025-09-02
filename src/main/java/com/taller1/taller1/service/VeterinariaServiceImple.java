@@ -10,6 +10,7 @@ import com.taller1.taller1.mapper.VeterinariaMapper;
 import com.taller1.taller1.models.Veterinaria;
 import com.taller1.taller1.repositories.VeterinariaRepositories;
 
+//codigo bueno 
 @Service
 public class VeterinariaServiceImple implements VeterinariaService{
     @Autowired

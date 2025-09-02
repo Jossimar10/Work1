@@ -11,6 +11,8 @@ import com.taller1.taller1.mapper.ProcedimientoHistoriaClinicaMapper;
 import com.taller1.taller1.models.ProcedimientoHistoriaClinica;
 import com.taller1.taller1.repositories.ProcedimientoHistoriaClinicaRepositories;
 
+//Autowired x
+//codigo Regular --
 @Service
 public class ProcedimientoHistoriaClinicaServiceImpl implements ProcedimientoHistoriaClinicaService {
 
@@ -44,7 +46,7 @@ public class ProcedimientoHistoriaClinicaServiceImpl implements ProcedimientoHis
 
     @Override
     public void delete(Long id) {
-        if (!procedimientoHistoriaClinicaRepositories.existsById(id)) {
+        if (procedimientoHistoriaClinicaRepositories.existsById(id)) {
             throw new RuntimeException("ProcedimientoHistoriaClinica not found with id: " + id);
         }
         procedimientoHistoriaClinicaRepositories.deleteById(id);
@@ -52,7 +54,7 @@ public class ProcedimientoHistoriaClinicaServiceImpl implements ProcedimientoHis
 
     @Override
     public ProcedimientoHistoriaClinicaDTO update(Integer id, ProcedimientoHistoriaClinicaDTO procedimientoHistoriaClinicaDTO) {
-        if (!procedimientoHistoriaClinicaRepositories.existsById(id.longValue())) {
+        if (procedimientoHistoriaClinicaRepositories.existsById(id.longValue())) {
             throw new RuntimeException("ProcedimientoHistoriaClinica not found with id: " + id);
         }
         procedimientoHistoriaClinicaDTO.setIdProcedimiento(id.longValue());

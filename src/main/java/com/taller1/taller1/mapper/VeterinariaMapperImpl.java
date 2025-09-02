@@ -9,6 +9,7 @@ import com.taller1.taller1.dto.VeterinariaDTO;
 import com.taller1.taller1.models.Veterinaria;
 
 
+//delete X
 @Component
 public class VeterinariaMapperImpl implements VeterinariaMapper {
 

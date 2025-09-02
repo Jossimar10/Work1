@@ -6,7 +6,10 @@ import java.util.List;
 import com.taller1.taller1.dto.ProcedimientoHistoriaClinicaDTO;
 import com.taller1.taller1.models.ProcedimientoHistoriaClinica;
 
-
+//tablas fuertes No necesitan mappers
+//No sabe que es List
+//Void no da respuesta 
+//Falta estructura
 public interface ProcedimientoHistoriaClinicaMapper {
     List<ProcedimientoHistoriaClinicaDTO> lProcedimientoHistoriaClinicaDTO(List<ProcedimientoHistoriaClinica> ProcedimientoHistoriaClinica);
     ProcedimientoHistoriaClinicaDTO save(ProcedimientoHistoriaClinica procedimientoHistoriaClinica);

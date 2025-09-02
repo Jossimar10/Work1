@@ -26,7 +26,7 @@ public class VeterinariaController  {
             this.veterinariaService = veterinariaService;
         }
 
-        @GetMapping("/{idVet}")
+        @GetMapping("/crear/{idVet}")
         public ResponseEntity<VeterinariaDTO> getById(@PathVariable Long idVet){
             return new ResponseEntity<>(veterinariaService.findById(idVet), HttpStatus.OK);
         }
@@ -41,7 +41,7 @@ public class VeterinariaController  {
             return new ResponseEntity<>(veterinariaService.getAll(), HttpStatus.OK);
         }
 
-        @PutMapping("/veterinaria/{idVet}")
+        @PutMapping("/veterinarias/{idVet}")
         public ResponseEntity<VeterinariaDTO> update(@PathVariable Long idVet, @RequestBody VeterinariaDTO veterinariaDTO){
             return new ResponseEntity<>(veterinariaService.update(idVet, veterinariaDTO), HttpStatus.OK);
         }

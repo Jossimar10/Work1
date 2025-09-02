@@ -14,6 +14,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Data
+
+//solo getter
 @Table(name = "Veterinaria")
 public class Veterinaria {
     @Id

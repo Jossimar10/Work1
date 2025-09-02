@@ -9,29 +9,31 @@ import org.springframework.web.bind.annotation.RestController;
 import com.taller1.taller1.dto.ProcedimientoHistoriaClinicaDTO;
 import com.taller1.taller1.service.ProcedimientoHistoriaClinicaService;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 
+//regular
 
 @RestController
 @RequestMapping("/historiaclinica")
     public class ProcedimientoHistoriaClinicaController {
 
-    @Autowired
     private final ProcedimientoHistoriaClinicaService procedimientoHistoriaClinicaService;
     
-    @Autowired
     public ProcedimientoHistoriaClinicaController(ProcedimientoHistoriaClinicaService procedimientoHistoriaClinicaService) {
         this.procedimientoHistoriaClinicaService = procedimientoHistoriaClinicaService;
     }
 
-    @GetMapping("/{id}")
-    public ProcedimientoHistoriaClinicaDTO getById (@PathVariable Long idProcedimiento) {
-        return procedimientoHistoriaClinicaService.findById(idProcedimiento);
+
+    @GetMapping("/crear/{id}")
+    public ProcedimientoHistoriaClinicaDTO findById (@PathVariable Long id) {
+        return procedimientoHistoriaClinicaService.findById(id);
     }
 
     @PostMapping
@@ -39,13 +41,13 @@ import org.springframework.web.bind.annotation.RequestBody;
         return procedimientoHistoriaClinicaService.save(procedimientoHistoriaClinicaDTO);
     }
 
-    @PutMapping("/historiaclinica")
-    public ProcedimientoHistoriaClinicaDTO updateProcedimientoHistoriaClinica(@org.springframework.web.bind.annotation.PathVariable Integer id, @RequestBody ProcedimientoHistoriaClinicaDTO procedimientoHistoriaClinicaDTO) {
+    @PutMapping("/{id}")
+    public ProcedimientoHistoriaClinicaDTO updateProcedimientoHistoriaClinica(@PathVariable Integer id, @RequestBody ProcedimientoHistoriaClinicaDTO procedimientoHistoriaClinicaDTO) {
         return procedimientoHistoriaClinicaService.update(id, procedimientoHistoriaClinicaDTO);
     }
 
-    @DeleteMapping("/historiaclinica")
-    public void deleteProcedimientoHistoriaClinica(@org.springframework.web.bind.annotation.PathVariable Long id) {
+    @DeleteMapping("/{id}")
+    public void deleteProcedimientoHistoriaClinica(@PathVariable Long id) {
         procedimientoHistoriaClinicaService.delete(id);
     }
 
